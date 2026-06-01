@@ -1,29 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AnnouncementBar } from "@/components/storefront/AnnouncementBar";
+import { Header } from "@/components/storefront/Header";
+import { Hero } from "@/components/storefront/Hero";
+import { Categories } from "@/components/storefront/Categories";
+import { ProductCarousel } from "@/components/storefront/ProductCarousel";
+import { Footer } from "@/components/storefront/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Mitushi — Premium Anime Streetwear" },
+      { name: "description", content: "Mitushi: limited-drop anime streetwear. Premium tees, tanks, and shorts crafted with Tokyo silhouettes and luxury construction." },
+      { property: "og:title", content: "Mitushi — Premium Anime Streetwear" },
+      { property: "og:description", content: "Limited-drop anime streetwear. Premium tees, tanks, and shorts crafted with Tokyo silhouettes." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <AnnouncementBar />
+      <Header />
+      <main>
+        <Hero />
+        <Categories />
+        <ProductCarousel />
+      </main>
+      <Footer />
     </div>
   );
 }
