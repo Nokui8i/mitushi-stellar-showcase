@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Search, ShoppingBag, ChevronDown } from "lucide-react";
 import logo from "@/assets/mitushi-logo.png.asset.json";
 
@@ -87,12 +88,12 @@ export function Header() {
           <button aria-label="Search" className="rounded-full p-2.5 text-foreground/80 hover:bg-crimson/10 hover:text-crimson transition">
             <Search className="h-4 w-4" />
           </button>
-          <button aria-label="Cart" className="relative rounded-full p-2.5 text-foreground/80 hover:bg-crimson/10 hover:text-crimson transition">
+          <Link to="/cart" aria-label="Cart" className="relative rounded-full p-2.5 text-foreground/80 hover:bg-crimson/10 hover:text-crimson transition">
             <ShoppingBag className="h-4 w-4" />
             <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-crimson text-[9px] font-bold text-crimson-foreground">
               2
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </header>
