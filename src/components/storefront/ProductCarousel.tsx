@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Plus } from "lucide-react";
 import s1 from "@/assets/product-shirt-1.jpg";
 import s1b from "@/assets/product-shirt-1-back.jpg";
@@ -50,7 +51,7 @@ export function ProductCarousel() {
               key={p.id}
               className="group relative w-[78vw] flex-shrink-0 snap-start sm:w-[360px]"
             >
-              <div className="relative aspect-[4/5] overflow-hidden bg-card">
+              <Link to="/product" className="relative block aspect-[4/5] overflow-hidden bg-card">
                 <img
                   src={p.front}
                   alt={p.name}
@@ -84,11 +85,11 @@ export function ProductCarousel() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </Link>
 
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-sm font-medium">{p.name}</h3>
+                  <h3 className="text-sm font-medium"><Link to="/product" className="hover:text-crimson transition">{p.name}</Link></h3>
                   <p className="mt-0.5 text-xs uppercase tracking-[0.2em] text-foreground/50">{p.tag}</p>
                 </div>
                 <div className="font-display text-lg">${p.price}</div>
