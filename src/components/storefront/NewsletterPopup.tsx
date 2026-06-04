@@ -102,11 +102,6 @@ export function NewsletterPopup() {
                 </div>
               </div>
             </div>
-            {/* Badge */}
-            <div className="absolute bottom-6 left-6 border border-border/60 bg-background/70 px-3 py-2 backdrop-blur">
-              <div className="text-[9px] uppercase tracking-[0.4em] text-foreground/60">Drop 04</div>
-              <div className="text-xs font-bold text-foreground">Members only</div>
-            </div>
           </div>
 
           {/* Form side */}
@@ -144,7 +139,7 @@ export function NewsletterPopup() {
                     autoFocus
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@domain.com"
+                    placeholder=""
                     className="w-full border border-border bg-[#1d1d1f] px-4 py-3 text-sm text-foreground placeholder:text-foreground/40 outline-none transition focus:border-crimson"
                   />
                   <button
