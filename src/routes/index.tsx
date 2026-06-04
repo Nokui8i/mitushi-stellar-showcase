@@ -30,6 +30,7 @@ function Index() {
         <ProductCarousel />
       </main>
       <Footer />
+      <NewsletterPopup />
     </div>
   );
 }
