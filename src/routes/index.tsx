@@ -5,6 +5,7 @@ import { Hero } from "@/components/storefront/Hero";
 import { Categories } from "@/components/storefront/Categories";
 import { ProductCarousel } from "@/components/storefront/ProductCarousel";
 import { Footer } from "@/components/storefront/Footer";
+import { NewsletterPopup } from "@/components/storefront/NewsletterPopup";
 
 export const Route = createFileRoute("/")({
   head: () => ({
