@@ -144,8 +144,8 @@ export function NewsletterPopup() {
                     autoFocus
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@domain.com"
-                    className="w-full border border-border bg-[#1d1d1f] px-4 py-3 text-sm text-foreground placeholder:text-foreground/40 outline-none transition focus:border-crimson"
+                    placeholder=""
+                    className="w-full border-none bg-[#1d1d1f] px-4 py-3 text-sm text-foreground placeholder:text-foreground/40 outline-none transition focus:ring-1 focus:ring-crimson"
                   />
                   <button
                     type="submit"
