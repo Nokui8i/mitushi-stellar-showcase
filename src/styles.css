@@ -37,6 +37,7 @@
   --font-display: "Bebas Neue", "Archivo Black", sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-jp: "Noto Serif JP", serif;
+  --font-script: "Great Vibes", cursive;
 
   --shadow-glow: 0 0 40px -10px color-mix(in oklab, var(--crimson) 60%, transparent);
   --shadow-card: 0 30px 60px -30px oklch(0 0 0 / 0.6);
@@ -94,6 +95,14 @@
 @layer utilities {
   .font-display { font-family: var(--font-display); letter-spacing: 0.02em; }
   .font-jp { font-family: var(--font-jp); }
+  .font-script { font-family: var(--font-script); letter-spacing: 0; }
+  .bg-grain {
+    background-image:
+      radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+  }
   .text-stroke {
     -webkit-text-stroke: 1px var(--bone);
     color: transparent;
