@@ -1,36 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AnnouncementBar } from "@/components/storefront/AnnouncementBar";
-import { Header } from "@/components/storefront/Header";
-import { Hero } from "@/components/storefront/Hero";
-import { Categories } from "@/components/storefront/Categories";
-import { ProductCarousel } from "@/components/storefront/ProductCarousel";
-import { Footer } from "@/components/storefront/Footer";
-import { NewsletterPopup } from "@/components/storefront/NewsletterPopup";
+import { WaitlistLanding } from "@/components/storefront/WaitlistLanding";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mitushi — Premium Anime Streetwear" },
-      { name: "description", content: "Mitushi: limited-drop anime streetwear. Premium tees, tanks, and shorts crafted with Tokyo silhouettes and luxury construction." },
-      { property: "og:title", content: "Mitushi — Premium Anime Streetwear" },
-      { property: "og:description", content: "Limited-drop anime streetwear. Premium tees, tanks, and shorts crafted with Tokyo silhouettes." },
+      { title: "Mitushi — Drop 01 Early Access" },
+      { name: "description", content: "Join the Mitushi waitlist. Premium Japanese streetwear, Drop 01 coming soon. Early access — no payment required." },
+      { property: "og:title", content: "Mitushi — Drop 01 Early Access" },
+      { property: "og:description", content: "Premium Japanese streetwear. Join the list for early access to Drop 01." },
     ],
   }),
   component: Index,
 });
 
 function Index() {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      <AnnouncementBar />
-      <Header />
-      <main>
-        <Hero />
-        <Categories />
-        <ProductCarousel />
-      </main>
-      <Footer />
-      <NewsletterPopup />
-    </div>
-  );
+  return <WaitlistLanding />;
 }
